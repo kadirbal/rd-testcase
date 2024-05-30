@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-hk text-[#1C1C1C];
+  }
+
+  table {
+    thead {
+      tr {
+        th {
+          @apply font-semibold;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          @apply py-3 border-b text-center text-sm;
+        }
+      }
+    }
+  }
+}
+
+@layer components {
+  .info-card {
+    @apply px-5 py-6 rounded-2xl grid gap-2 grow shrink-0;
+    h6 {
+      @apply text-sm;
+    }
+
+    p {
+      @apply text-2xl;
+    }
+
+    &:nth-child(odd) {
+      @apply bg-[#E3F5FF];
+    }
+
+    &:nth-child(even) {
+      @apply bg-[#E5ECF6];
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      @apply font-bold;
+    }
+  }
+}
